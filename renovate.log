@@ -1,0 +1,207 @@
+ INFO: jobScheduler running
+DEBUG: Installation IDs and logins
+       "installationsIdLogin": [{"id": 6877024, "login": "moredhel"}]
+ INFO: Found 1 account(s) installed
+       "accountNames": ["moredhel"],
+       "accountCount": 1
+DEBUG: getInstallationToken(appToken, 6877024)
+DEBUG: getInstallationRepositories
+DEBUG: Found 1 repositories
+DEBUG: Installation repositories
+       "installation": {
+         "id": 6877024,
+         "account": {
+           "login": "moredhel",
+           "id": 37147773,
+           "node_id": "MDEyOk9yZ2FuaXphdGlvbjM3MTQ3Nzcz",
+           "avatar_url": "https://avatars2.githubusercontent.com/u/37147773?v=4",
+           "gravatar_id": "",
+           "url": "https://api.github.com/users/moredhel",
+           "html_url": "https://github.com/moredhel",
+           "followers_url": "https://api.github.com/users/moredhel/followers",
+           "following_url": "https://api.github.com/users/moredhel/following{/other_user}",
+           "gists_url": "https://api.github.com/users/moredhel/gists{/gist_id}",
+           "starred_url": "https://api.github.com/users/moredhel/starred{/owner}{/repo}",
+           "subscriptions_url": "https://api.github.com/users/moredhel/subscriptions",
+           "organizations_url": "https://api.github.com/users/moredhel/orgs",
+           "repos_url": "https://api.github.com/users/moredhel/repos",
+           "events_url": "https://api.github.com/users/moredhel/events{/privacy}",
+           "received_events_url": "https://api.github.com/users/moredhel/received_events",
+           "type": "Organization",
+           "site_admin": false
+         },
+         "repository_selection": "selected",
+         "access_tokens_url": "https://api.github.com/app/installations/6877024/access_tokens",
+         "repositories_url": "https://api.github.com/installation/repositories",
+         "html_url": "https://github.com/organizations/moredhel/settings/installations/6877024",
+         "app_id": 54685,
+         "app_slug": "renovate-bot-service",
+         "target_id": 37147773,
+         "target_type": "Organization",
+         "permissions": {
+           "members": "read",
+           "administration": "read",
+           "checks": "write",
+           "contents": "write",
+           "issues": "write",
+           "metadata": "read",
+           "pull_requests": "write",
+           "statuses": "write",
+           "vulnerability_alerts": "read"
+         },
+         "events": [
+           "check_run",
+           "check_suite",
+           "issues",
+           "push",
+           "repository",
+           "status"
+         ],
+         "created_at": "2020-02-19T15:57:43.000Z",
+         "updated_at": "2020-03-13T10:58:17.000Z",
+         "single_file_name": null
+       },
+       "repositories": ["moredhel/devops-test-repo"]
+DEBUG: Installation moredhel has 1 repositories installed: ["moredhel/devops-test-repo"]
+ INFO: Repository count=1
+ INFO: Enqueing repos
+       "repositories": ["moredhel/devops-test-repo"]
+DEBUG: Job queue: enqueing job (repository=moredhel/devops-test-repo)
+       "reason": "scheduled",
+       "priority": 100
+DEBUG: Job queue: returning next job
+       "job": {
+         "reason": "scheduled",
+         "repository": "moredhel/devops-test-repo",
+         "priority": 100,
+         "installationId": 6877024
+       }
+ INFO: Processing repository (repository=moredhel/devops-test-repo)
+       "installationId": 6877024,
+       "priority": 100,
+       "reason": "scheduled"
+ INFO: Processing github repo (repository=moredhel/devops-test-repo)
+DEBUG: Setting GHE hostRule (repository=moredhel/devops-test-repo)
+       "config": {"hostType": "github", "hostName": "api.github.com", "token": "***********"}
+DEBUG: Finished setting hostRules (repository=moredhel/devops-test-repo)
+DEBUG: Adding host rule (repository=moredhel/devops-test-repo)
+       "config": {"timeout": 60000}
+ INFO: Renovating repository (repository=moredhel/devops-test-repo)
+DEBUG: Using localDir: /tmp/renovate/github/moredhel/devops-test-repo (repository=moredhel/devops-test-repo)
+DEBUG: initRepo("moredhel/devops-test-repo") (repository=moredhel/devops-test-repo)
+ INFO: Authenticated as user: renovate-bot-service[bot] (repository=moredhel/devops-test-repo)
+ INFO: Using renovate version: 19.66.3 (repository=moredhel/devops-test-repo)
+DEBUG: Overriding default GitHub endpoint (repository=moredhel/devops-test-repo)
+DEBUG: moredhel/devops-test-repo owner = moredhel (repository=moredhel/devops-test-repo)
+DEBUG: moredhel/devops-test-repo default branch = master (repository=moredhel/devops-test-repo)
+DEBUG: Using app token for git init (repository=moredhel/devops-test-repo)
+ INFO: Initialising git repository into /tmp/renovate/github/moredhel/devops-test-repo (repository=moredhel/devops-test-repo)
+ INFO: git clone completed (repository=moredhel/devops-test-repo)
+       "cloneSeconds": 1.6
+DEBUG: latest commit (repository=moredhel/devops-test-repo)
+       "latestCommitDate": "2020-03-13 12:23:46 +0100"
+DEBUG: No git private key present - commits will be unsigned (repository=moredhel/devops-test-repo)
+ INFO: Setting git author (repository=moredhel/devops-test-repo)
+       "gitAuthor": {
+         "name": "Renovate Bot Service",
+         "email": "renovate-bot-service[bot]@users.noreply.github.com"
+       }
+DEBUG: resetMemCache() (repository=moredhel/devops-test-repo)
+DEBUG: detectSemanticCommits() (repository=moredhel/devops-test-repo)
+DEBUG: getCommitMessages (repository=moredhel/devops-test-repo)
+DEBUG: Semantic commits detection: unknown (repository=moredhel/devops-test-repo)
+DEBUG: No semantic commits detected (repository=moredhel/devops-test-repo)
+DEBUG: checkOnboarding() (repository=moredhel/devops-test-repo)
+DEBUG: isOnboarded() (repository=moredhel/devops-test-repo)
+DEBUG: findFile(renovate.json) (repository=moredhel/devops-test-repo)
+DEBUG: config file exists (repository=moredhel/devops-test-repo)
+DEBUG: ensureIssueClosing(Action required: Add a Renovate config) (repository=moredhel/devops-test-repo)
+DEBUG: Retrieving issueList (repository=moredhel/devops-test-repo)
+DEBUG: Retrieved 0 issues (repository=moredhel/devops-test-repo)
+DEBUG: Repo is onboarded (repository=moredhel/devops-test-repo)
+DEBUG: Found renovate.json config file (repository=moredhel/devops-test-repo)
+ INFO: Repository config (repository=moredhel/devops-test-repo)
+       "configFile": "renovate.json",
+       "config": {}
+DEBUG: migrateAndValidate() (repository=moredhel/devops-test-repo)
+DEBUG: No config migration necessary (repository=moredhel/devops-test-repo)
+DEBUG: massaged config (repository=moredhel/devops-test-repo)
+       "config": {}
+DEBUG: migrated config (repository=moredhel/devops-test-repo)
+       "config": {}
+DEBUG: Found repo ignorePaths (repository=moredhel/devops-test-repo)
+       "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+DEBUG: checkBaseBranch() (repository=moredhel/devops-test-repo)
+DEBUG: config.repoIsOnboarded=true (repository=moredhel/devops-test-repo)
+DEBUG: Setting baseBranch to master (repository=moredhel/devops-test-repo)
+DEBUG: latest commit (repository=moredhel/devops-test-repo)
+       "branchName": "master",
+       "latestCommitDate": "2020-03-13 12:23:46 +0100"
+DEBUG: Setting branchPrefix: renovate/ (repository=moredhel/devops-test-repo)
+DEBUG: Cannot read vulnerability alerts (repository=moredhel/devops-test-repo)
+DEBUG: No vulnerability alerts found (repository=moredhel/devops-test-repo)
+DEBUG: processRepo() (repository=moredhel/devops-test-repo)
+DEBUG: No baseBranches (repository=moredhel/devops-test-repo)
+DEBUG: extractAndUpdate() (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)WORKSPACE$ for manager bazel (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=moredhel/devops-test-repo)
+DEBUG: bundler is disabled (repository=moredhel/devops-test-repo)
+DEBUG: cargo is disabled (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/).circleci/config.yml$ for manager circleci (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)([\w-]*)composer.json$ for manager composer (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)deps\.edn$ for manager deps-edn (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)docker-compose[^/]*\.ya?ml$ for manager docker-compose (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)Dockerfile$ for manager dockerfile (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)Dockerfile\.[^/]*$ for manager dockerfile (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/).drone.yml$ for manager droneci (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^\.github/main.workflow$ for manager github-actions (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^\.github/workflows/[^/]+\.ya?ml$ for manager github-actions (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^\.gitlab-ci\.yml$ for manager gitlabci (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^\.gitlab-ci\.yml$ for manager gitlabci-include (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)go.mod$ for manager gomod (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)gradle.properties$ for manager gradle (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper.properties$ for manager gradle-wrapper (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)requirements.yaml$ for manager helm-requirements (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.pom\.xml$ for manager maven (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)pom\.xml$ for manager maven (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)package.js$ for manager meteor (repository=moredhel/devops-test-repo)
+DEBUG: mix is disabled (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)package.json$ for manager npm (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.csproj$ for manager nuget (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: ^.nvmrc$ for manager nvm (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)([\w-]*)requirements.(txt|pip)$ for manager pip_requirements (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)setup.py$ for manager pip_setup (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=moredhel/devops-test-repo)
+DEBUG: Matched 1 file(s) for manager terraform: provider.tf (repository=moredhel/devops-test-repo)
+DEBUG: travis is disabled (repository=moredhel/devops-test-repo)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=moredhel/devops-test-repo)
+DEBUG: Found 0 package file(s) (repository=moredhel/devops-test-repo)
+DEBUG: manager.fetchUpdates() (repository=moredhel/devops-test-repo)
+DEBUG: packageFiles with updates (repository=moredhel/devops-test-repo)
+       "config": {}
+DEBUG: branchifyUpgrades (repository=moredhel/devops-test-repo)
+DEBUG: 0 flattened updates found:  (repository=moredhel/devops-test-repo)
+DEBUG: Returning 0 branch(es) (repository=moredhel/devops-test-repo)
+DEBUG: config.repoIsOnboarded=true (repository=moredhel/devops-test-repo)
+ INFO: Processing 0 branches:  (repository=moredhel/devops-test-repo)
+DEBUG: branchPrefix: renovate/ (repository=moredhel/devops-test-repo)
+DEBUG: Retrieving PR list (repository=moredhel/devops-test-repo)
+DEBUG: Retrieved 0 Pull Requests (repository=moredhel/devops-test-repo)
+DEBUG: Found 0 Renovate PRs (repository=moredhel/devops-test-repo)
+       "renovatePrs": []
+DEBUG: Removing any stale branches (repository=moredhel/devops-test-repo)
+DEBUG: config.repoIsOnboarded=true (repository=moredhel/devops-test-repo)
+DEBUG: No renovate branches found (repository=moredhel/devops-test-repo)
+DEBUG: ensureIssueClosing(Action Required: Fix Renovate Configuration) (repository=moredhel/devops-test-repo)
+ INFO: Finished repository (repository=moredhel/devops-test-repo)
