@@ -1,3 +1,7 @@
+provider "aws" {
+  version = "~> 0.40.0"
+}
+
 provider "azurerm" {
   version = "~> 1.40.0"
 }
